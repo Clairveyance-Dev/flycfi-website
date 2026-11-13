@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy policy — FlyCFI</title>
+<meta name="description" content="What FlyCFI stores, why, and who can see it.">
+<meta property="og:title" content="Privacy policy — FlyCFI">
+<meta property="og:description" content="What FlyCFI stores, why, and who can see it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flycfi.app/privacy/">
+<meta property="og:image" content="https://flycfi.app/assets/app-icon-512.png">
+<link rel="canonical" href="https://flycfi.app/privacy/">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="/" class="brand"><img src="/assets/wordmark.png" alt="FlyCFI"></a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/" class="is-active">Privacy</a>
+      <a href="/terms/">Terms</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="prose">
+    <div class="container measure">
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated November 2026. This is the same text that appears
+      inside the app, under App &amp; account &rarr; Privacy policy.</p>
+
+      <p>FlyCFI is made by Clairveyance. This policy covers the FlyCFI app and the
+      service behind it.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>An instructor&rsquo;s records are visible to that instructor and to nobody else.</li>
+        <li>A student sees their own training record and nothing about any other student.</li>
+        <li>We do not sell anything to anyone, and there is no advertising in this app.</li>
+        <li>There is no analytics SDK and nothing that tracks you across other apps or websites.</li>
+        <li>Crash reports are collected, and they are stripped of anything that could
+        identify a person before they leave your device.</li>
+      </ul>
+
+      <h2>What is stored</h2>
+      <p>Because this is a record-keeping app for flight training, most of what it holds
+      is entered deliberately by an instructor about their own students.</p>
+      <ul>
+        <li>Your account: email address and an encrypted password, held by our authentication provider.</li>
+        <li>Your operation: its name, your name, your certificate number and expiry, your
+        rates and the aircraft and airports you set up.</li>
+        <li>Each student: name, date of birth (used only to enforce the age floor and to
+        flag a minor), contact details you enter, their course, every lesson and grade,
+        flights, endorsements issued, test results, homework and notes.</li>
+        <li>Where an instructor records a 49 CFR 1552 citizenship check, the fact of the
+        check and any document image they attach. This is held apart from the rest of a
+        student record, under tighter rules, and is never visible in the student app.</li>
+        <li>Messages between an instructor and a student, and anything an instructor
+        shares with a student.</li>
+        <li>Feedback you send us, with your app version and build.</li>
+      </ul>
+
+      <h2>What is NOT stored</h2>
+      <ul>
+        <li>No payment card details ever touch this app or our database. If card payment
+        is added it will run through a payment processor and we will never see the number.</li>
+        <li>No location. The app does not ask for it and does not use it.</li>
+        <li>No contacts, no calendar, no microphone.</li>
+        <li>Photos only when you choose one to attach, and only the one you pick.</li>
+      </ul>
+
+      <h2>Who can see it</h2>
+      <p>Access is enforced by the database, not by the app. An instructor can read the
+      records of their own operation. A student, once invited, can read the parts of
+      their own record listed in the app under &ldquo;What they see&rdquo; &mdash; and
+      cannot read any row belonging to another student, nor the instructor&rsquo;s
+      private notes, nor anything about money.</p>
+      <p>Our engineers can reach the database to operate and support the service. We look
+      at an individual record only when you ask us to, or where we must to fix a fault or
+      meet a legal obligation.</p>
+
+      <h2>Crash reports</h2>
+      <p>When the app crashes it sends a report to Sentry, our error-reporting provider,
+      so the fault can be found and fixed. A report says where the code broke, on what
+      device, and on which build.</p>
+      <p>It is deliberately stripped first. Your session is identified by an opaque
+      account id and nothing else &mdash; no email address, no name. Email addresses are
+      removed from any message, web addresses are cut back to the path so a database
+      filter cannot carry a student&rsquo;s name, and request bodies, headers and console
+      output are dropped entirely. No student record is ever sent.</p>
+      <p>One thing is added at Sentry&rsquo;s end rather than sent by the app: a report
+      arrives over an internet connection, and a connection reveals roughly where it came
+      from. We have switched off the storing of IP addresses on our Sentry project, so
+      neither the address nor a location derived from it is kept.</p>
+      <p>This is not analytics. Nothing is recorded about what you look at or how often
+      you use the app.</p>
+
+      <h2>Where it is stored</h2>
+      <p>On Supabase, in the United States. Supabase is our data processor and does not
+      use your data for its own purposes. Crash reports go to Sentry, also in the United
+      States. Those two are the only companies that hold anything of yours on our behalf.</p>
+
+      <h2>Children</h2>
+      <p>FlyCFI is for flight instructors and their students. Accounts are not offered to
+      children under 13, and the app refuses to create a student record with a date of
+      birth under 13. A student under 18 is marked as a minor, and an invitation to the
+      student app is expected to go to a parent or guardian.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li>You can see everything about yourself in the app.</li>
+        <li>An instructor can correct or remove any student record they entered.</li>
+        <li>A student can ask their instructor to correct anything about them.</li>
+        <li>You can delete your account from App &amp; account &rarr; My account.</li>
+      </ul>
+
+      <h2>Deleting your account</h2>
+      <p>Deleting an instructor account closes your sign-in and schedules the operation
+      and its records for deletion. Deleting a student account detaches it from the
+      training record and closes the sign-in; the training record itself belongs to the
+      instructor and stays with them, because an instructor is required by 14 CFR 61.189
+      to keep it for three years.</p>
+      <p>If you want something removed sooner than that, or want a copy of what we hold,
+      write to <a href="mailto:support@flycfi.app">support@flycfi.app</a>.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes in a way that matters, the app will say so rather than
+      quietly updating the date.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:support@flycfi.app">support@flycfi.app</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container foot-row">
+    <img src="/assets/wordmark.png" alt="FlyCFI">
+    <span>&copy; 2026 Clairveyance</span>
+    <span class="spacer"></span>
+    <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="mailto:support@flycfi.app">support@flycfi.app</a>
+  </div>
+  <div class="container" style="margin-top:14px">
+    <p style="margin:0;font-size:.86rem">FlyCFI&trade; and the FlyCFI logo are trademarks of Clairveyance.
+    FlyCFI is not endorsed by or affiliated with the Federal Aviation Administration.</p>
+  </div>
+</footer>
+
+</body>
+</html>
