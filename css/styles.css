@@ -152,10 +152,19 @@ ul.plain.no li::before { content: '✕'; color: #E0795E; }
   flex-wrap: wrap;
 }
 .foot-qr img {
+  /* height/width stated, and NOT left to the rule above.
+     `.site-footer img { height: 34px }` styles the wordmark, and it was
+     hitting this code too -- it loaded and decoded perfectly and drew at
+     34px, which no camera can read. An image that renders is not an image
+     that works. 96px is comfortably scannable at arm's length. */
+  width: 96px;
+  height: 96px;
+  flex: none;
   background: #fff;
   border-radius: 10px;
   padding: 6px;
   display: block;
+  opacity: 1;
 }
 .foot-qr p {
   margin: 0;
