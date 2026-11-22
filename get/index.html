@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get FlyCFI</title>
+<meta name="description" content="Get FlyCFI — the CFI's student tracker.">
+<!--
+  THE ONE LINE THAT MOVES THE QR CODE.
+
+  This page is what https://flycfi.app/get serves, and it is where the share
+  QR code points -- the code baked into the app and printed in the footer of
+  every page on this site.
+
+  Those codes cannot be changed once they are out in the world: scanned,
+  screenshotted, shipped inside an installed build, printed on something.
+  This page can. So the destination lives HERE, in one place, instead of
+  being encoded into the image.
+
+  TO SEND EVERY EXISTING CODE TO THE APP STORE, the day FlyCFI is published:
+
+    1. Set STORE_URL below to https://apps.apple.com/app/id6830830708
+    2. Redeploy the site (scripts/deploy_website_pages.py --go)
+
+  That is the whole change. No new build, no new QR image, no reprinting.
+  Also flip APP_STORE_LIVE to true in FlyCFI/src/lib/appInfo.ts so the app's
+  own Rate button stops being disabled -- a separate switch, same event.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<style>
+  .get-wrap { max-width: 34rem; margin: 0 auto; padding: 4rem 1.25rem; text-align: center; }
+  .get-wrap h1 { margin-bottom: .5rem; }
+  .get-wrap p { margin: 0 0 1.25rem; }
+  .get-qr { width: 220px; height: 220px; background: #fff; border-radius: 16px; padding: 12px; }
+</style>
+</head>
+<body>
+<main class="get-wrap">
+  <img src="/assets/wordmark.png" alt="FlyCFI" style="height:44px">
+  <h1>Get FlyCFI</h1>
+  <p id="msg">Taking you to FlyCFI&hellip;</p>
+  <p><a id="fallback" class="btn" href="/">Go to flycfi.app</a></p>
+  <img class="get-qr" src="/assets/share-qr.png" alt="QR code for FlyCFI">
+</main>
+<script>
+  // null until FlyCFI has a public App Store page. See the note above.
+  var STORE_URL = null;
+
+  var link = document.getElementById('fallback');
+  var msg  = document.getElementById('msg');
+
+  if (STORE_URL) {
+    link.href = STORE_URL;
+    link.textContent = 'Open the App Store';
+    // Replace, not assign: the person should not land back here when they
+    // press Back from the App Store.
+    window.location.replace(STORE_URL);
+  } else {
+    msg.textContent = 'FlyCFI is not on the App Store yet. Here is what it does in the meantime.';
+    link.textContent = 'See what FlyCFI does';
+  }
+</script>
+</body>
+</html>

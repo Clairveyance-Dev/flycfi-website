@@ -139,3 +139,25 @@ ul.plain.no li::before { content: '✕'; color: #E0795E; }
 .site-footer a { color: var(--t2); }
 .site-footer .spacer { margin-left: auto; }
 .site-footer img { height: 34px; width: auto; opacity: .9; }
+
+/* Share QR in the footer.
+   RC, 2026-11-22: "Same QR will need to be on footer on website pages."
+   The white plate is not decoration: the code is black modules on white, and
+   without a light quiet zone behind it most cameras stop seeing a code. */
+.foot-qr {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.foot-qr img {
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px;
+  display: block;
+}
+.foot-qr p {
+  margin: 0;
+  font-size: .86rem;
+}
